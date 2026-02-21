@@ -1,0 +1,94 @@
+/* Navigation container */
+.navbar {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  padding: 15px 0; /* Changed padding to 0 on sides to allow inner container control */
+  position: sticky;
+  top: 0;
+  left: 0;       /* Ensure it starts at the very left */
+  width: 100%;   /* Force it to be 100% of the viewport width */
+  z-index: 1000;
+}
+
+/* Flex container for nav content */
+.nav-container {
+  max-width: 1200px; /* Keep this for alignment */
+  width: 100%;       /* Ensure it expands within the navbar */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;   /* Move the side padding here */
+}
+
+/* Logo styling */
+.logo h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  color: white;
+  letter-spacing: 1.5px;
+  user-select: none;
+  cursor: default;
+}
+
+/* Nav links container */
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+/* Base link styles */
+.nav-links a {
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  padding: 6px 0;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+  color: #ffd200;
+}
+
+/* Active link underline */
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #ffd200;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+  width: 100%;
+}
+
+/* Make active link text slightly bolder */
+.nav-links a.active {
+  font-weight: 700;
+  color: #ffd200;
+}
+
+/* Responsive mobile menu (optional) */
+@media (max-width: 600px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 15px 20px;
+  }
+  .nav-links {
+    width: 100%;
+    justify-content: space-around;
+  }
+  .nav-links a {
+    font-size: 14px;
+  }
+}

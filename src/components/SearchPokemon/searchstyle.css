@@ -1,0 +1,110 @@
+.search-page-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.search-page-container h1 {
+  color: #ffd200;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+/* Custom Styled Filter Row */
+.controls-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 60px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 40px;
+}
+
+.controls-row input {
+  flex: 1;
+  max-width: 400px;
+  padding: 12px 25px;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  outline: none;
+}
+
+/* Custom Dropdown CSS */
+.type-dropdown {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='gold'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 20px;
+  
+  padding: 12px 40px 12px 20px;
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffd200;
+  border: 2px solid rgba(255, 210, 0, 0.3);
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.type-dropdown:hover {
+  border-color: #ffd200;
+  box-shadow: 0 0 10px rgba(255, 210, 0, 0.2);
+}
+
+.type-dropdown option {
+  background: #203a43;
+  color: white;
+}
+
+/* Grid for cards */
+.pokemon-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Your Pokeball Loader CSS (included) */
+.pokeball-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.pokeball {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: relative;
+  background: linear-gradient(to bottom, #ff1c1c 50%, white 50%);
+  border: 4px solid #222;
+  animation: rotateBall 1.2s linear infinite;
+}
+
+.pokeball-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 26px;
+  height: 26px;
+  background: white;
+  border-radius: 50%;
+  border: 6px solid #222;
+  transform: translate(-50%, -50%);
+  animation: pulseButton 1s ease-in-out infinite;
+}
+
+@keyframes rotateBall { to { transform: rotate(360deg); } }
+@keyframes pulseButton { 
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.2); }
+}

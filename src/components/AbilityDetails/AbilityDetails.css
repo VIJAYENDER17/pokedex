@@ -1,0 +1,54 @@
+.ability-details-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  color: white;
+}
+
+.ability-card {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(15px);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ability-title {
+  color: #ffd200;
+  text-transform: uppercase;
+  font-size: 32px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid rgba(255, 210, 0, 0.3);
+  display: inline-block;
+}
+
+.effect-section p {
+  line-height: 1.6;
+  font-size: 18px;
+  color: #e0e0e0;
+}
+
+.mini-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.mini-poke-link {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  text-transform: capitalize;
+  transition: 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mini-poke-link:hover {
+  background: #ffd200;
+  color: #000;
+  transform: scale(1.05);
+}

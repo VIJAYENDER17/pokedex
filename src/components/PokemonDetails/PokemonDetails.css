@@ -1,0 +1,188 @@
+.pokemon-details-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #ffd200;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.pokemon-name {
+  font-size: 32px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+.pokemon-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.pokemon-image {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6));
+}
+
+.pokemon-info {
+  flex: 1;
+  min-width: 280px;
+  color: #f0f0f0;
+}
+
+.pokemon-info h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  border-bottom: 2px solid #ffd200;
+  padding-bottom: 4px;
+}
+
+.types {
+  margin-bottom: 20px;
+}
+
+.type-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 50px;
+  font-size: 14px;
+  margin-right: 8px;
+  text-transform: capitalize;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+/* Reuse your existing type colors if possible */
+.fire { background: linear-gradient(135deg, #f12711, #f5af19); }
+.water { background: linear-gradient(135deg, #2193b0, #6dd5ed); }
+.grass { background: linear-gradient(135deg, #56ab2f, #a8e063); }
+.electric { background: linear-gradient(135deg, #f7971e, #ffd200); }
+.psychic { background: linear-gradient(135deg, #fc466b, #3f5efb); }
+.ice { background: linear-gradient(135deg, #83a4d4, #b6fbff); }
+.dragon { background: linear-gradient(135deg, #373b44, #4286f4); }
+.dark { background: linear-gradient(135deg, #232526, #414345); }
+.fairy { background: linear-gradient(135deg, #ff9a9e, #fad0c4); }
+.normal { background: linear-gradient(135deg, #757f9a, #d7dde8); }
+
+/* Lists */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+ul li {
+  padding: 4px 0;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+p {
+  font-size: 16px;
+  margin: 6px 0;
+}
+
+
+.pokeball-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokeball {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: relative;
+  background: linear-gradient(to bottom, #ff1c1c 50%, white 50%);
+  border: 4px solid #222;
+  animation: rotateBall 1.2s linear infinite;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
+}
+
+/* Black center line */
+.pokeball::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: #222;
+  transform: translateY(-50%);
+}
+
+/* Center button */
+.pokeball-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 26px;
+  height: 26px;
+  background: white;
+  border-radius: 50%;
+  border: 6px solid #222;
+  transform: translate(-50%, -50%);
+  animation: pulseButton 1s ease-in-out infinite;
+}
+/* Styling the list container */
+.pokemon-info ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Space between the ability pills */
+  margin-bottom: 25px;
+}
+
+/* Base style for the ability link */
+.ability-link {
+  display: inline-block;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffd200; /* Matching your gold accent color */
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 500;
+  text-transform: capitalize;
+  border: 1px solid rgba(255, 210, 0, 0.3);
+  transition: all 0.3s ease;
+  font-size: 15px;
+}
+
+/* Hover effect to show it's clickable (Requirement for Module 8) */
+.ability-link:hover {
+  background: #ffd200;
+  color: #1a2a6c; /* Dark text for contrast on gold background */
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 210, 0, 0.4);
+  border-color: #ffd200;
+}
+
+/* Active/Focus state for accessibility */
+.ability-link:active {
+  transform: translateY(-1px);
+}
