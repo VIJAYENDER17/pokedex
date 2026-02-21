@@ -1,5 +1,5 @@
 🛡️ Pokédex Explorer App
-A modern, high-performance Pokémon encyclopedia built with React and React Router. This application provides a seamless experience for searching, filtering, and exploring the vast world of Pokémon using the PokéAPI.
+A modernPokémon encyclopedia built with React and React Router. This application provides a seamless experience for searching, filtering, and exploring the vast world of Pokémon using the PokéAPI.
 
 🚀 Features Implemented
 1. Pokémon Listing & Pagination
